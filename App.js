@@ -45,26 +45,26 @@ class App extends Component{
         imgbg='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png'
       }
       return( <Card avatar key={index}>
-      <CardItem header>
+      <CardItem header  style = {{ backgroundColor:'#DD5144'}}>
         <Left>
           <Thumbnail source={{uri:imgbg}}/>
           <Body>
-            <Text>{name}</Text>
-            <Text note>{kota}</Text>
+            <Text style = {{ color:'white'}}>{name}</Text>
+            <Text note style = {{ color:'white'}}>{kota}</Text>
           </Body>
         </Left>
         <Right>
-          <Text>Rp {hrg2}</Text>
+          <Text style = {{ color:'white'}}>Rp {hrg2}</Text>
         </Right>
       </CardItem>
       <CardItem cardBody>
         <Image source={{uri:imgbg}} style={{height:400,width:400,flex:1}}/>
       </CardItem>
-      <CardItem footer>
+      <CardItem footer  style = {{ backgroundColor:'#DD5144'}}>
         <Left><Button transparent>
           <Icon name="flag"/>
           </Button>
-          <Text>{alamat}</Text>
+          <Text style = {{ color:'white'}}>{alamat}</Text>
         </Left>
       </CardItem>
       </Card>
@@ -72,7 +72,7 @@ class App extends Component{
     })
     return (
      <Container>
-       <Header searchBar rounded style = {{ backgroundColor:'green'}} >
+       <Header searchBar rounded style = {{ backgroundColor:'#DD5144'}} >
         <Item>
         <Button transparent onPress={()=>this.klik()}><Icon name="search"/></Button>
           <Input placeholder="Cari Makanan..." onChangeText={(x)=>{this.setState({menu:x})}} />
